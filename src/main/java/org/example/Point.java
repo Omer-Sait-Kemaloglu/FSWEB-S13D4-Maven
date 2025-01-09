@@ -7,27 +7,33 @@ public class Point {
     private int y;
 
     // Constructor
-    public  point(int x, int y){
-        this.x= x;
-        this.y= y;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
+
     // Getter and Setter Methods
-    public int getX(){
+    public int getX() {
         return x;
     }
-    public void setX(int x){
-        this.x= x;
+
+    public void setX(int x) {
+        this.x = x;
     }
-    public int getY(){
+
+    public int getY() {
         return y;
     }
-    public void setY(int y){
-        this.y=y;
+
+    public void setY(int y) {
+        this.y = y;
     }
-    // Method - distance
-    public double distance(){
+
+    // Method - distance to (0, 0)
+    public double distance() {
         return Math.sqrt(x * x + y * y);
     }
+
     // Method - distance to another Point
     public double distance(Point p) {
         return Math.sqrt((p.x - this.x) * (p.x - this.x) + (p.y - this.y) * (p.y - this.y));
@@ -37,5 +43,4 @@ public class Point {
     public double distance(int a, int b) {
         return Math.sqrt((a - this.x) * (a - this.x) + (b - this.y) * (b - this.y));
     }
-
 }
